@@ -1,0 +1,222 @@
+/* ---------------------------- import font --------------------------- */
+@import url("./font/fonts.css");
+
+/* --------------------------- config tools --------------------------- */
+* {
+  font-family: sans-serif;
+  margin: auto;
+}
+:root {
+  --primary_color: #fff;
+  --secund_color: #0b73f7;
+  --light_color_text: #eff6fe;
+}
+/* ------------------------------ Body ------------------------------ */
+
+/* ----------------------------- header ----------------------------- */
+header {
+  display: flex;
+  text-align: center;
+  background: var(--secund_color);
+  color: var(--light_color_text);
+  padding: 12px;
+  i {
+    align-self: center;
+    flex-grow: 0;
+    img {
+      min-width: 12px;
+    }
+  }
+  h1 {
+    font-family: "cro";
+    font-size: 3.2em;
+    letter-spacing: 5px;
+    flex-grow: 2;
+  }
+}
+
+/* ----------------------------- main ----------------------------- */
+main {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 1em 0;
+}
+
+/* ------------------------------ form ------------------------------ */
+#register_product {
+  border: 2ex double var(--secund_color);
+  display: flex;
+  flex-flow: column;
+  flex-grow: 2;
+  height: 45vh;
+  width: 80vw;
+  border-radius: 10px;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0.1px;
+  #register {
+    display: flex;
+    flex-flow: column nowrap;
+    input {
+      margin: 1ex 3rem;
+      padding: 1rem 1rem 3px 5px;
+      border: 3px solid var(--secund_color);
+      border-radius: 5px;
+      &::placeholder {
+        color: #000;
+      }
+    }
+    input[type="text"] {
+      width: 50vw;
+    }
+    input[type="file"] {
+      width: 50vw;
+      text-align: left;
+      &::file-selector-button {
+        display: none;
+      }
+    }
+  }
+  .btn__buttons {
+    width: 60svw;
+    display: flex;
+    justify-content: space-between;
+    .btn {
+      border: 2px solid var(--light_color_text);
+      border-radius: 10px;
+      background-color: var(--secund_color);
+      color: var(--light_color_text);
+      width: 7em;
+      padding: 1rem;
+    }
+  }
+}
+
+/* ---------------------------- products --------------------------- */
+#market {
+  box-sizing: border-box;
+  margin: 1em 0.5em;
+  h2 {
+    margin: 1ex;
+    text-align: center;
+  }
+  #products {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;
+    flex-grow: 2;
+    .product {
+      margin: 1rem auto;
+      background: #541bffb9;
+      padding: 1rem;
+      border: 5px solid #000;
+      min-width: 60px;
+      width: 30%;
+      max-width: 150px;
+      border-radius: 10px 1px;
+      figure {
+        display: flex;
+        border-radius: 10px;
+        flex-flow: column nowrap;
+        justify-content: center;
+        background: #fff;
+        padding: 1rex;
+        img {
+          min-width: 60px;
+          width: 30%;
+          max-width: 100px;
+        }
+      }
+      h2 {
+        color: var(--light_color_text);
+      }
+      .description {
+        color: var(--light_color_text);
+      }
+    }
+  }
+}
+/* ---------------------------- footer ---------------------------- */
+footer {
+  color: var(--light_color_text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secund_color);
+  padding: 2em;
+  .content_footer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .title {
+    display: flex;
+    align-items: center;
+    h3 {
+      font-family: "cro";
+      font-size: 2em;
+      letter-spacing: 3px;
+      margin: 1rem;
+    }
+  }
+}
+/* ----------------------- view tablet  --------------------- */
+@media (690px <= width <= 1079px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    #market {
+      max-width: 60%;
+      border: 1px solid #000;
+      flex-grow: 1;
+      max-height: fit-content;
+    }
+    #register_product {
+      margin: 10% auto;
+      align-self: flex-start;
+      height: 60%;
+      width: 20vw;
+      #register {
+        margin: auto 0;
+        input {
+          margin: 1rex auto;
+        }
+        input[type="text"],
+        input[type="file"] {
+          width: 70%;
+        }
+      }
+      .btn__buttons {
+        width: 100%;
+      }
+    }
+  }
+}
+/* ----------------------- view pc --------------------- */
+@media (1080px <= width <= 3020px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    #market {
+      max-width: 70%;
+      flex-grow: 2;
+      .product {
+        margin: 1ex;
+      }
+    }
+    #register_product {
+      flex-grow: 1;
+      width: 10vb;
+      #register {
+        input[type="text"],
+        input[type="file"] {
+          width: 70%;
+        }
+      }
+      .btn__buttons {
+        width: 95%;
+      }
+    }
+  }
+}
