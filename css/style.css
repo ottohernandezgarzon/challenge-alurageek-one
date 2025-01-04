@@ -44,6 +44,7 @@ main {
 
 /* ------------------------------ form ------------------------------ */
 #register_product {
+  background-color: var(--primary_color);
   border: 2ex double var(--secund_color);
   display: flex;
   flex-flow: column;
@@ -65,15 +66,26 @@ main {
       &::placeholder {
         color: #000;
       }
-    }
-    input[type="text"] {
-      width: 50vw;
-    }
-    input[type="file"] {
-      width: 50vw;
-      text-align: left;
-      &::file-selector-button {
-        display: none;
+
+      &[type="text"] {
+        width: 50vw;
+      }
+      &[type="file"] {
+        background-color: var(--primary_color);
+        width: 50vw;
+        text-align: left;
+        &::file-selector-button {
+          display: none;
+        }
+      }
+      &[type="number"]::-webkit-inner-spin-button,
+      &[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      &[type="number"] {
+        -moz-appearance: textfield;
       }
     }
   }
@@ -131,7 +143,19 @@ main {
         color: var(--light_color_text);
       }
       .description {
-        color: var(--light_color_text);
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        padding: 5px;
+        border-radius: 10px;
+        span {
+          font-family: "cro";
+          text-align: center;
+        }
+      }
+      input[type="image"] {
+        float: right;
+        width: 25%;
       }
     }
   }
@@ -168,7 +192,6 @@ footer {
     flex-direction: row;
     #market {
       max-width: 60%;
-      border: 1px solid #000;
       flex-grow: 1;
       max-height: fit-content;
     }
@@ -183,6 +206,7 @@ footer {
           margin: 1rex auto;
         }
         input[type="text"],
+        input[type="number"],
         input[type="file"] {
           width: 70%;
         }
@@ -207,9 +231,11 @@ footer {
     }
     #register_product {
       flex-grow: 1;
+      gap: 2;
       width: 10vb;
       #register {
         input[type="text"],
+        input[type="number"],
         input[type="file"] {
           width: 70%;
         }

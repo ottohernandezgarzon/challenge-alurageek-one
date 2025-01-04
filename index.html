@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,56 +17,9 @@
         <h2>Mis productos</h2>
         <div id="products">
           <article class="product">
-            <figure>
-              <img
-                src="/assent/img/playstation.png"
-                alt="playStation__producto"
-              />
-              <figcaption><b>Play Station</b></figcaption>
-              <span>$10</span>
-            </figure>
-            <span class="description"
-              >Lorem ipsum dolor sit amet consectetur adipisicing elit.</span
-            >
-          </article>
-          <article class="product">
-            <figure>
-              <img
-                src="/assent/img/playstation.png"
-                alt="playStation__producto"
-              />
-              <figcaption><b>Play Station</b></figcaption>
-              <span>$10</span>
-            </figure>
-            <span class="description"
-              >Lorem ipsum dolor sit amet consectetur adipisicing elit.</span
-            >
-          </article>
-          <article class="product">
-            <figure>
-              <img
-                src="/assent/img/playstation.png"
-                alt="playStation__producto"
-              />
-              <figcaption><b>Play Station</b></figcaption>
-              <span>$10</span>
-            </figure>
-            <span class="description"
-              >Lorem ipsum dolor sit amet consectetur adipisicing elit.</span
-            >
-          </article>
-          <article class="product">
-            <figure>
-              <img
-                src="/assent/img/playstation.png"
-                alt="playStation__producto"
-              />
-              <figcaption><b>Play Station</b></figcaption>
-              <span>$10</span>
-            </figure>
-            <span class="description"
-              >Lorem ipsum dolor sit amet consectetur adipisicing elit.</span
-            >
+            <div class="description">
+              <span>No hay conexión a base de datos</span>
+            </div>
           </article>
         </div>
         <!-- #!SECTION   -->
@@ -74,26 +27,21 @@
       <section id="register_product">
         <!-- #SECTION "Formulario de registro" -->
         <h3>Registra el producto</h3>
-        <form action="" method="post" id="register">
+        <form method="post" id="register">
           <input
             type="text"
             name="name_product"
             id="name_product"
             placeholder="Nombre del producto"
           />
-          <input type="text" name="cash" id="cash" placeholder="Precio" />
-          <input type="file" name="image" />
+          <input type="number" name="cash" id="cash" placeholder="Precio" />
+          <input type="file" name="image" id="imagen" />
         </form>
         <div class="btn__buttons">
-          <button
-            type="submit"
-            form="register"
-            class="btn"
-            id="btn btn__enviar"
-          >
+          <button type="submit" form="register" class="btn" id="btn__enviar">
             Enviar
           </button>
-          <button type="button" class="btn" id="btn__impiar">Limpiar</button>
+          <button type="button" class="btn" id="btn__limpiar">Limpiar</button>
         </div>
         <!-- #!SECTION  -->
       </section>
@@ -111,6 +59,6 @@
         <span>ALURA LATAM - 2024</span>
       </div>
     </footer>
-    <script src="/js/main.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
